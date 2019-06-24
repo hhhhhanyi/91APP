@@ -2,6 +2,54 @@ body {
   padding: 50px;
 }
 
-#errorMessage{
+label {
+  font-size: 16px;
+}
+
+hr {
+  margin: 30px;
+}
+
+#errorMessage {
   text-align: center;
+}
+
+.title {
+  color: #5b5b5b;
+  margin-top: 20px;
+}
+
+.subtitle {
+  color: #8e8e8e;
+}
+
+#statistics {
+  border: 2px solid #696969;
+  border-collapse: collapse;
+  width: 100%;
+  /* table-layout: fixed; */
+}
+tr:nth-child(even) {
+  background-color: #eee;
+}
+
+#statistics td {
+  border: 1px solid #696969;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#HOUR {
+  background-color: #696969;
+  color: white;
+}
+
+svg {
+    /* height:100%; */
+    width:100%;
+}
+
+#chart {
+  vertical-align: top;
+  width: 100%;
 }

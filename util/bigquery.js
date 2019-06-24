@@ -3,7 +3,7 @@ const constants = require('./constants');
 
 const bigQuery = (year, month, day) => {
   const bigquery = new BigQuery({
-    projectId: config.projectId,
+    projectId: constants.projectId,
     keyFilename: './util/bigquerykey.json'
   });
 
