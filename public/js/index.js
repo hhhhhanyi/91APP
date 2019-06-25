@@ -6,6 +6,7 @@ const search = () => {
   document.getElementsByClassName("subtitle")[1].innerHTML = '';
   document.getElementById("statistics").innerHTML = '';
   document.getElementById("chart").innerHTML = '';
+  document.getElementById("errorMessage").innerHTML = '';
   fetch('/data', {
     method: 'POST',
     headers: {

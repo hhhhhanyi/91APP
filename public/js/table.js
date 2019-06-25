@@ -13,34 +13,34 @@ const createColumns = (id, content) => {
 
 const createTable = (data) => {
   createRow('HOUR');
-  createColumns('HOUR', '時間 (hr)');
+  createColumns('HOUR', '時間 (小時區間)');
   for (let j=0; j<data.length; j++) {
     createColumns('HOUR', data[j].HOUR.value.replace(':00:00',''));
   }
 
   createRow('TOTAL');
-  createColumns('TOTAL', '平均車費');
+  createColumns('TOTAL', '平均車費 (元)');
   for (let j=0; j<data.length; j++) {
     let num = Math.round(data[j].TOTAL*100)/100;
     createColumns('TOTAL', num);
   }
 
   createRow('TIPS');
-  createColumns('TIPS', '平均小費');
+  createColumns('TIPS', '平均小費 (元)');
   for (let j=0; j<data.length; j++) {
     let num = Math.round(data[j].TIPS*100)/100;
     createColumns('TIPS', num);
   }
 
   createRow('PERCENT');
-  createColumns('PERCENT', '小費/車費');
+  createColumns('PERCENT', '小費/車費 (%)');
   for (let j=0; j<data.length; j++) {
-    let num = Math.round(data[j].TIPS/data[j].TOTAL*100)/100;
+    let num = Math.round(data[j].TIPS/data[j].TOTAL*10000)/100;
     createColumns('PERCENT', num);
   }
 
   createRow('COUNT');
-  createColumns('COUNT', '車次');
+  createColumns('COUNT', '車次 (次)');
   for (let j=0; j<data.length; j++) {
     let num = Math.round(data[j].COUNT*100)/100;
     createColumns('COUNT', num);
