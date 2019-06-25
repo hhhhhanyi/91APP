@@ -6,7 +6,7 @@ const search = () => {
   document.getElementsByClassName("subtitle")[1].innerHTML = '';
   document.getElementById("statistics").innerHTML = '';
   document.getElementById("chart").innerHTML = '';
-  document.getElementById("errorMessage").innerHTML = '';
+  document.getElementById("errorMessage").innerHTML = 'loading.....';
   fetch('/data', {
     method: 'POST',
     headers: {
@@ -17,6 +17,7 @@ const search = () => {
     return response.json();
   }).then((data) => {
     if (!data.error) {
+      document.getElementById("errorMessage").innerHTML = '';
       createTable(data);
       createChart(data);
       document.getElementsByClassName("title")[0].innerHTML = 'TABLE';
