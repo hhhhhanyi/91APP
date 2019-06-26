@@ -3,8 +3,7 @@
 Website: [https://bigquery.hhhhhanyi.com/](https://bigquery.hhhhhanyi.com/)
 
 ## Demo
-![img](https://i.imgur.com/0tQJ0qv.png)
-
+![img](https://imgur.com/p2zYffr.png)
 
 ## Tech Stack
 - BigQuery
