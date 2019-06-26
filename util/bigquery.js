@@ -13,15 +13,14 @@ const bigQuery = (year, month, day) => {
     AVG(tips) AS TIPS,
     COUNT(*) AS COUNT
     FROM \`${constants.projectId}.${constants.dataset}.${constants.table}\`
-    WHERE DATE_TRUNC(DATE(trip_start_timestamp), month) = '${year}-${month}-01'
+    WHERE DATE_TRUNC(DATE(trip_start_timestamp), month) = @date
     GROUP BY HOUR ORDER BY HOUR`;
 
   const options = {
     query: query,
     location: constants.location,
     params: {
-      year: year,
-      month: month
+      date: `${year}-${month}-01`
     }
   };
 
