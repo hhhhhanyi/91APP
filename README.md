@@ -17,6 +17,7 @@ Website: [https://bigquery.hhhhhanyi.com/](https://bigquery.hhhhhanyi.com/)
 ## BigQuery
 - 資料來源：bigquery-public-data.chicago_taxi\_trips
 - 使用分區資料表：依據 TIMESTAMP 資料欄分區。
+- 參數化查詢：防止 SQL injection。
 
 ## 使用說明
 ### INPUT

@@ -13,8 +13,13 @@
     <div class="form-horizontal" id="search">
       <div class="row form-group">
         <label for="date" class="col-sm-2 control-label">請輸入查詢日期：</label>
-        <div class="col-sm-8">
-          <input type="date" class="form-control" name="date" id="date" placeholder="請輸入 2013-01-01 至 2017-08-01 的任意日期。" min="2013-01-01" max="2017-08-01" value="2013-01-01">
+        <label for="year" class="col-sm-1 control-label sub">年份</label>
+        <div class="col-sm-3">
+          <input type="number" class="form-control" name="year" id="year" placeholder="請輸入 2013 至 2017 的任意年份。" min=2013 max=2017 value=2013 oninput="yearSelect(event)">
+        </div>
+        <label for="month" class="col-sm-1 control-label sub">月份</label>
+        <div class="col-sm-3">
+          <input type="number" class="form-control" name="month" id="month" placeholder="請輸入 1 至 12 的任意月份。" min=1 max=12 value=1>
         </div>
         <div class="col-sm-2">
           <button class="btn btn-success" id="submit" onclick="search()">Submit</button>

@@ -7,7 +7,11 @@ label {
 }
 
 hr {
-  margin: 30px;
+  margin: 40px;
+}
+
+.sub {
+  color: #8e8e8e;
 }
 
 #message {
@@ -16,7 +20,7 @@ hr {
 
 .title {
   color: #5b5b5b;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .subtitle {
@@ -35,8 +39,9 @@ tr:nth-child(even) {
 
 #statistics td {
   border: 1px solid #696969;
-  padding: 10px 0;
+  padding: 10px 2px;
   text-align: center;
+  font-size: 12px;
 }
 
 #HOUR {

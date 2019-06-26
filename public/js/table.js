@@ -42,7 +42,7 @@ const createTable = (data) => {
   createRow('COUNT');
   createColumns('COUNT', '車次 (次)');
   for (let j=0; j<data.length; j++) {
-    let num = Math.round(data[j].COUNT*100)/100;
+    let num = (Math.round(data[j].COUNT*100)/100).toLocaleString();
     createColumns('COUNT', num);
   }
 };

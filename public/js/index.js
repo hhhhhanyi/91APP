@@ -1,5 +1,6 @@
 const search = () => {
-  const date = document.getElementById("date").value;
+  const year = document.getElementById("year").value;
+  const month = document.getElementById("month").value;
   document.getElementsByClassName("title")[0].innerHTML = '';
   document.getElementsByClassName("title")[1].innerHTML = '';
   document.getElementsByClassName("subtitle")[0].innerHTML = '';
@@ -12,7 +13,7 @@ const search = () => {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ date: date })
+    body: JSON.stringify({ year, month })
   }).then((response) => {
     return response.json();
   }).then((data) => {
@@ -31,3 +32,12 @@ const search = () => {
     console.log(error);
   });
 };
+
+const yearSelect = (event) => {
+  if (event.target.value === '2017') {
+    document.getElementById('month').max = 8;
+    document.getElementById('month').value = 1;
+  } else new Promise(function(resolve, reject) {
+    document.getElementById('month').max = 12;
+  });
+}
