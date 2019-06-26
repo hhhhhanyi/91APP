@@ -21,9 +21,10 @@ Website: [https://bigquery.hhhhhanyi.com/](https://bigquery.hhhhhanyi.com/)
 ## 使用說明
 ### INPUT
 
-|        | 格式             | 
-| ------ | ----------      | 
-| 日期   | YYYY-MM-DD | 
+|        | type             | 
+| ------ | ---------- | 
+| 年份   | number   | 
+| 月份   | number     | 
 
 ### OUTPUT
 - TABLE
